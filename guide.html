@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080809">
+  <meta name="description" content="GRAND FES 2027 大会案内。アクセス、申し込み方法、大会ルール、当日の流れ、持ち物・注意事項を順次掲載予定です。">
+  <title>大会案内 | GRAND FES 2027
+</title>
+
+ <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      color-scheme:dark;
+      --ink:#080809;
+      --char:#121114;
+      --cream:#f8f5ec;
+      --gold:#eccb83;
+      --gold-deep:#a8732d;
+      --red:#ed2938;
+      --line:#ffffff2b;
+      --muted:#bab4ae;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      background:var(--ink);
+      color:var(--cream);
+      font-family:'Noto Sans JP',sans-serif;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    a{ color:inherit; }
+    button,a{ -webkit-tap-highlight-color:transparent; }
+
+    .wrap{
+      width:min(1440px,100% - 80px);
+      margin-inline:auto;
+    }
+
+    .eyebrow{
+      font-family:'Barlow Condensed',sans-serif;
+      letter-spacing:.3em;
+      text-transform:uppercase;
+      font-size:.85rem;
+      font-weight:800;
+      color:var(--gold);
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    .topbar{
+      position:fixed;
+      z-index:100;
+      top:0;
+      left:0;
+      right:0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:20px 40px;
+      border-bottom:1px solid #ffffff3a;
+      background:#080809d9;
+      backdrop-filter:blur(16px);
+    }
+
+    .brand{
+      font-family:'Barlow Condensed',sans-serif;
+      font-weight:900;
+      font-size:1.7rem;
+      line-height:1;
+      letter-spacing:-.025em;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .brand em{
+      font-style:normal;
+      color:var(--gold);
+    }
+
+    .menu-toggle{
+      display:none !important;
+    }
+
+    .topbar nav{
+      display:flex;
+      align-items:center;
+      gap:1.4rem;
+    }
+
+    .topbar nav > a{
+      position:relative;
+      width:auto;
+      padding:0;
+      font-size:.78rem;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-decoration:none;
+      white-space:nowrap;
+      transition:color .2s;
+    }
+
+    .topbar nav > a:hover,
+    .topbar nav > a:focus-visible{
+      color:var(--gold);
+    }
+
+    .topbar nav > a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      right:100%;
+      bottom:-8px;
+      height:2px;
+      background:var(--red);
+      transition:right .25s;
+    }
+
+    .topbar nav > a:hover::after,
+    .topbar nav > a:focus-visible::after{
+      right:0;
+    }
+
+    .menu-subpages{
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      gap:1.2rem;
+      width:auto;
+      margin:0 0 0 .6rem;
+      padding:0 0 0 1.2rem;
+      border-left:1px solid #e6c08155;
+    }
+
+    .menu-subpages a{
+      width:auto;
+      display:flex;
+      align-items:center;
+      gap:.35rem;
+      padding:0;
+      color:var(--gold);
+      font-size:.78rem;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .menu-subpages a[aria-current="page"]{
+      color:#fff1c8;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .guide-hero{
+      position:relative;
+      min-height:60svh;
+      display:flex;
+      align-items:center;
+      padding:150px 0 90px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 80% 18%,#57101f 0%,transparent 34%),
+        radial-gradient(circle at 10% 80%,#30101a 0%,transparent 36%),
+        #080809;
+      border-bottom:1px solid #c68d4933;
+    }
+
+    .guide-hero::before{
+      content:'GUIDE';
+      position:absolute;
+      right:-.05em;
+      bottom:-.22em;
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:clamp(13rem,35vw,34rem);
+      font-weight:900;
+      line-height:.8;
+      color:#ffffff05;
+      pointer-events:none;
+    }
+
+    .guide-hero .wrap{
+      position:relative;
+      z-index:1;
+    }
+
+    .guide-hero h1{
+      margin:20px 0 24px;
+      font-family:'Barlow Condensed','Noto Sans JP',sans-serif;
+      font-size:clamp(4rem,9vw,9rem);
+      font-weight:900;
+      line-height:.95;
+      letter-spacing:-.045em;
+    }
+
+    .guide-hero h1 span{
+      color:var(--gold);
+    }
+
+    .guide-hero p{
+      max-width:720px;
+      margin:0;
+      color:#d7d0c8;
+      font-size:clamp(1rem,1.5vw,1.15rem);
+      line-height:1.95;
+    }
+
+
+
+
+/* =========================
+   ACCESS
+========================= */
+
+.guide-access{
+  position:relative;
+
+  padding:110px 0 120px;
+
+  background:
+    radial-gradient(
+      circle at 85% 30%,
+      #35101a 0%,
+      transparent 30%
+    ),
+    #080809;
+
+  border-bottom:1px solid #e6c08130;
+}
+
+.access-head{
+  max-width:760px;
+}
+
+.access-head h2{
+  margin:18px 0 22px;
+
+  font-family:
+    'Barlow Condensed',
+    'Noto Sans JP',
+    sans-serif;
+
+  font-size:
+    clamp(
+      2.8rem,
+      6vw,
+      6rem
+    );
+
+  line-height:1;
+  letter-spacing:-.035em;
+}
+
+.access-head h2 span{
+  color:var(--gold);
+}
+
+.access-head p{
+  margin:0;
+
+  max-width:650px;
+
+  color:#d7d0c8;
+
+  line-height:1.9;
+}
+
+
+.access-grid{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    minmax(340px,.9fr);
+
+  gap:50px;
+
+  margin-top:60px;
+
+  align-items:stretch;
+}
+
+
+.access-info{
+  border-top:3px solid var(--gold);
+}
+
+
+.access-item{
+  padding:25px 6px;
+
+  border-bottom:
+    1px solid #ffffff20;
+}
+
+
+.access-label{
+  display:block;
+
+  margin-bottom:7px;
+
+  color:var(--gold);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:.8rem;
+
+  font-weight:900;
+
+  letter-spacing:.18em;
+}
+
+
+.access-item strong{
+  display:block;
+
+  font-size:1.3rem;
+}
+
+
+.access-item p{
+  margin:0;
+
+  color:var(--muted);
+
+  line-height:1.8;
+}
+
+
+.access-map{
+  padding:8px;
+
+  border:
+    1px solid #e6c08166;
+
+  background:#0d0b0e;
+
+  box-shadow:
+    14px 16px 0 #ed293822;
+}
+
+
+.access-map-label{
+  display:block;
+
+  padding:8px 10px 12px;
+
+  color:var(--gold);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:.8rem;
+
+  font-weight:900;
+
+  letter-spacing:.2em;
+}
+
+
+.map-placeholder{
+  min-height:350px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #171216,
+      #09090b
+    );
+
+  border:
+    1px solid #ffffff14;
+}
+
+
+.map-placeholder strong{
+  color:var(--cream);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:2rem;
+
+  letter-spacing:.08em;
+}
+
+
+.map-placeholder span{
+  color:var(--muted);
+
+  font-size:.85rem;
+}
+
+    /* =========================
+       COMING SOON
+    ========================= */
+    .guide-coming{
+      padding:100px 0 130px;
+      background:
+        radial-gradient(circle at 15% 25%,#2b0d15 0%,transparent 30%),
+        #0a090b;
+    }
+
+    .coming-card{
+      position:relative;
+      overflow:hidden;
+      padding:52px;
+      background:linear-gradient(145deg,#191116,#0d0c0e);
+      border-top:3px solid var(--gold);
+      border-bottom:1px solid #e6c08155;
+      box-shadow:18px 20px 0 #ed29381c;
+    }
+
+    .coming-card::after{
+      content:'SOON';
+      position:absolute;
+      right:-.02em;
+      bottom:-.26em;
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:clamp(9rem,24vw,22rem);
+      font-weight:900;
+      line-height:1;
+      color:#ffffff04;
+      pointer-events:none;
+    }
+
+    .coming-card > *{
+      position:relative;
+      z-index:1;
+    }
+
+    .coming-label{
+      display:inline-block;
+      color:var(--gold);
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:.9rem;
+      font-weight:900;
+      letter-spacing:.24em;
+    }
+
+    .coming-card h2{
+      margin:18px 0 34px;
+      font-size:clamp(2rem,5vw,4.5rem);
+      line-height:1.18;
+      letter-spacing:-.035em;
+    }
+
+    .guide-list{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:0 28px;
+  margin:0;
+  padding:0;
+  list-style:none;
+  border-top:1px solid #ffffff20;
+
+  grid-auto-flow:row;
+}
+
+    .guide-list li{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:17px 4px;
+      border-bottom:1px solid #ffffff18;
+      font-weight:800;
+    }
+
+    .guide-list li::before{
+      content:'→';
+      color:var(--red);
+      font-weight:900;
+    }
+
+    .coming-note{
+      max-width:680px;
+      margin:34px 0 0;
+      color:var(--muted);
+      line-height:1.95;
+    }
+
+    .back-home{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      margin-top:34px;
+      padding:12px 18px;
+      border:1px solid var(--gold);
+      color:var(--gold);
+      font-weight:900;
+      text-decoration:none;
+      transition:.2s;
+    }
+
+    .back-home:hover,
+    .back-home:focus-visible{
+      background:var(--gold);
+      color:#160b0e;
+    }
+
+    footer{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      padding:24px 40px;
+      background:#070709;
+      color:#a99f96;
+      font-size:.78rem;
+      border-top:1px solid #ffffff14;
+    }
+
+.access-map iframe{
+  display:block;
+  width:50%;
+  min-height:350px;
+  border:0;
+}
+
+.access-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:50px;
+  margin-top:60px;
+  align-items:start;
+}
+
+.access-info{
+  min-width:0;
+}
+
+.access-map{
+  min-width:0;
+  padding:8px;
+  border:1px solid #e6c08166;
+  background:#0d0b0e;
+  box-shadow:14px 16px 0 #ed293822;
+}
+
+.access-map iframe{
+  display:block;
+  width:100%;
+  height:520px;
+  border:0;
+}
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+    @media(max-width:760px){
+
+ .guide-access{
+    padding:70px 0 80px;
+  }
+
+  .access-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+    margin-top:40px;
+  }
+
+  .access-item{
+    padding:20px 4px;
+  }
+
+  .access-map{
+    width:100%;
+    box-shadow:9px 10px 0 #ed293822;
+  }
+
+  .access-map iframe{
+    width:100%;
+    height:320px;
+  }
+
+
+.guide-access{
+  padding:70px 0 80px;
+}
+
+.access-grid{
+  grid-template-columns:1fr;
+
+  gap:35px;
+
+  margin-top:40px;
+}
+
+.access-item{
+  padding:20px 4px;
+}
+
+.access-map{
+  width:100%;
+
+  box-shadow:
+    9px 10px 0 #ed293822;
+}
+
+
+
+      .wrap{
+        width:calc(100% - 36px);
+      }
+
+      .topbar{
+        padding:16px 18px;
+        min-height:68px;
+      }
+
+      .brand{
+        position:relative;
+        z-index:102;
+        font-size:1.4rem;
+      }
+
+      .menu-toggle{
+        display:flex !important;
+        flex-direction:column;
+        justify-content:center;
+        gap:5px;
+        width:42px;
+        height:42px;
+        margin-left:auto;
+        padding:8px;
+        border:0;
+        background:transparent;
+        cursor:pointer;
+        position:relative;
+        z-index:102;
+      }
+
+      .menu-toggle span{
+        display:block;
+        width:100%;
+        height:2px;
+        background:var(--cream);
+        transition:transform .3s,opacity .3s;
+      }
+
+      .topbar nav{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:95px 28px 35px;
+        background:#080809f8;
+        border-bottom:1px solid #e6c08155;
+        backdrop-filter:blur(16px);
+        transform:translateY(-110%);
+        transition:transform .35s ease;
+        z-index:101;
+      }
+
+      .topbar nav > a{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        width:100%;
+        padding:15px 0;
+        border-bottom:1px solid #ffffff18;
+        font-size:.9rem;
+        letter-spacing:.03em;
+        color:var(--cream);
+      }
+
+      .topbar nav > a::after{
+        display:none;
+      }
+
+      .menu-subpages{
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        width:100%;
+        margin:14px 0 0;
+        padding:14px 0 0;
+        border:0;
+        border-top:1px solid #e6c08155;
+      }
+
+      .menu-subpages a{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        width:100%;
+        padding:15px 0;
+        border:0;
+        border-bottom:1px solid #ffffff18;
+        color:var(--gold) !important;
+        font-size:.9rem;
+        white-space:nowrap;
+      }
+
+      .menu-subpages a span{
+        margin-left:auto;
+      }
+
+      .topbar.menu-open nav{
+        transform:translateY(0);
+      }
+
+      .topbar.menu-open .menu-toggle span:nth-child(1){
+        transform:translateY(7px) rotate(45deg);
+      }
+      .topbar.menu-open .menu-toggle span:nth-child(2){
+        opacity:0;
+      }
+      .topbar.menu-open .menu-toggle span:nth-child(3){
+        transform:translateY(-7px) rotate(-45deg);
+      }
+
+      .guide-hero{
+        min-height:auto;
+        padding:120px 0 70px;
+      }
+
+      .guide-hero h1{
+        font-size:clamp(3.5rem,18vw,6rem);
+      }
+
+      .guide-coming{
+        padding:65px 0 90px;
+      }
+
+      .coming-card{
+        padding:30px 22px;
+        box-shadow:10px 12px 0 #ed29381c;
+      }
+
+      .guide-list{
+        grid-template-columns:1fr;
+      }
+
+      footer{
+        padding:20px 18px;
+        flex-direction:column;
+        text-align:center;
+      }
+    }
+
+    @media(max-width:420px){
+      .topbar .brand{
+        font-size:1.28rem;
+      }
+
+      .coming-card h2{
+        font-size:2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="GRAND FES トップ">
+      GRAND <em>FES</em>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav aria-label="メインナビゲーション">
+      <a href="index.html#news">お知らせ</a>
+      <a href="index.html#event">大会概要</a>
+      <a href="index.html#levels">出場レベル</a>
+      <a href="index.html#pv">公式プロモーション動画</a>
+      <a href="index.html#digest">過去大会ダイジェスト動画</a>
+
+      <div class="menu-subpages">
+
+          <a href="guide.html">
+    大会案内
+    <span>↗</span>
+
+  </a>
+
+  <a href="performance.html">
+    各レベルの演技項目
+    <span>↗</span>
+  </a>
+
+  <a href="message.html">
+    主催者からのメッセージ
+    <span>↗</span>
+  </a>
+
+</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="guide-hero">
+      <div class="wrap">
+        <div class="eyebrow">GRAND FES 2027 / GUIDE</div>
+        <h1>大会<span>案内</span></h1>
+        <p>
+          GRAND FES 2027に参加する皆さんへ向けた各種ご案内を、順次このページに掲載していきます。
+          アクセスや申し込み方法、大会ルールなど、参加前に確認しておきたい情報をまとめてご案内します。
+        </p>
+      </div>
+    </section>
+
+<!-- =========================
+     ACCESS
+========================= -->
+
+<section class="guide-access" id="access">
+
+  <div class="wrap">
+
+    <div class="access-head">
+
+      <span class="eyebrow">
+        01 / ACCESS
+      </span>
+
+      <h2>
+        会場への<span>アクセス</span>
+      </h2>
+
+      <p>
+        GRAND FES 2027の会場は
+        「大宮体育館」です。
+        ご来場前にアクセス方法をご確認ください。
+      </p>
+
+    </div>
+
+
+    <div class="access-grid">
+
+      <div class="access-info">
+
+        <div class="access-item">
+
+          <span class="access-label">
+            VENUE / 会場
+          </span>
+
+          <strong>
+            大宮体育館
+          </strong>
+
+        </div>
+
+
+        <div class="access-item">
+
+          <span class="access-label">
+            ADDRESS / 所在地
+          </span>
+
+          <strong>
+            埼玉県さいたま市見沼区大和田町1-323-4
+          </strong>
+
+        </div>
+
+
+        <div class="access-item">
+
+          <span class="access-label">
+            TRAIN / 電車・バス
+          </span>
+
+          <p>
+            電車でのアクセス<br>東武アーバンパークライン（野田線）
+	<br>• 「大和田駅」から徒歩約16分
+	<br>• 「大宮公園駅」から徒歩約17分
+        <br><br>
+<p>バスでのアクセス<br>
+
+• 国際興業バス<br>
+ 「大宮駅東口（11番乗場）」から寿能経由導守循環、「大和田坂上バス停」下車 → 徒歩3分<br>
+ 「大宮駅東口（6番乗場）」から西中野経由導守循環、「大和田坂上バス停」下車 → 徒歩3分<br>
+・東武バス<br>
+「大宮駅東口」から岩槻駅行・宮下行、「大和田バス停」下車→徒歩約８分
+ </p>
+
+        </div>
+
+
+        <div class="access-item">
+
+          <span class="access-label">
+            CAR / お車でお越しの方
+          </span>
+
+          <p>
+            駐車場は一般の方もご利用されるため、本大会では駐車台数に限りがございます。そのため、事前抽選に当選した方のみ駐車場をご利用いただけます。<br> <strong>
+〈注意〉<br>なお、無断で一般利用エリアの駐車が発覚した場合は当日の大会運営に支障をきたすため絶対におやめください。</strong>
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+ <!-- 右側：Googleマップ -->
+  <div class="access-map">
+
+  <span class="access-map-label">
+    MAP
+  </span>
+
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41019.29518553221!2d139.59531999965364!3d35.945328141603795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c12f318cd5b9%3A0x5f66c1f46f76ec96!2z44GV44GE44Gf44G-5biC5aSn5a6u5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1792299143087!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <section class="guide-coming">
+      <div class="wrap">
+        <div class="coming-card">
+          <span class="coming-label">COMING SOON</span>
+
+          <h2>
+            大会参加に関する情報を、<br>
+            順次公開予定です。
+          </h2>
+
+          <ul class="guide-list">
+<li class="is-open">
+アクセス（公開済み）</li>
+<li>申し込み方法(COMING SOON)</li>
+            <li>大会ルール(COMING SOON)</li>
+            <li>当日の流れ(COMING SOON)</li>
+            <li>持ち物・注意事項(COMING SOON)</li>
+            <li>その他のご案内(COMING SOON)</li>
+          </ul>
+
+          <p class="coming-note">
+            詳細が決まり次第、このページで随時お知らせします。
+            公開までもうしばらくお待ちください。
+          </p>
+
+          <a class="back-home" href="index.html">
+            TOPページへ戻る →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2027 GRAND FES</span>
+    <span>2027.01.31 / 大宮体育館</span>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const topbar = document.querySelector('.topbar');
+
+    if(menuToggle && topbar){
+      menuToggle.addEventListener('click', () => {
+        const opened = topbar.classList.toggle('menu-open');
+
+        menuToggle.setAttribute('aria-expanded', opened);
+        menuToggle.setAttribute(
+          'aria-label',
+          opened ? 'メニューを閉じる' : 'メニューを開く'
+        );
+      });
+
+      topbar.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          topbar.classList.remove('menu-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'メニューを開く');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,3146 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
+
+  <title>
+    演技項目 | GRAND FES 2027
+  </title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    :root {
+      --ink:#080809;
+      --char:#121114;
+      --cream:#f8f5ec;
+      --gold:#eccb83;
+      --gold-deep:#a8732d;
+      --red:#ed2938;
+      --muted:#bab4ae;
+      --line:#ffffff2b;
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    html {
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+
+      background:
+        radial-gradient(
+          circle at 82% 18%,
+          #3b0c16,
+          transparent 34%
+        ),
+        #080809;
+
+      color:var(--cream);
+
+      font-family:
+        'Noto Sans JP',
+        sans-serif;
+
+      line-height:1.8;
+
+      overflow-x:hidden;
+    }
+
+    a {
+      color:inherit;
+    }
+
+
+    /* =========================
+   HEADER
+========================= */
+
+.topbar {
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  right:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:20px 40px;
+
+  border-bottom:1px solid #ffffff3a;
+
+  background:#080809a8;
+  backdrop-filter:blur(16px);
+
+  transition:background .25s,border-color .25s;
+}
+
+.brand {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:1.7rem;
+  line-height:1;
+  letter-spacing:-.025em;
+
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.brand em {
+  font-style:normal;
+  color:var(--gold);
+}
+
+.topbar nav {
+  display:flex;
+  align-items:center;
+  gap:2.4rem;
+}
+
+.topbar nav a {
+  position:relative;
+
+  margin:0;
+  padding:0;
+
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.08em;
+
+  text-decoration:none;
+  white-space:nowrap;
+
+  transition:color .2s;
+}
+
+.topbar nav a:hover,
+.topbar nav a:focus-visible {
+  color:var(--gold);
+}
+
+.topbar nav a:after {
+  content:'';
+
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:-8px;
+
+  height:2px;
+
+  background:var(--red);
+
+  transition:right .25s;
+}
+
+.topbar nav a:hover:after,
+.topbar nav a:focus-visible:after {
+  right:0;
+}
+
+
+    /* =========================
+       共通
+    ========================= */
+
+    .wrap {
+      width:min(1180px,calc(100% - 80px));
+      margin-inline:auto;
+
+      position:relative;
+      z-index:1;
+    }
+
+    .eyebrow {
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:.85rem;
+
+      font-weight:800;
+
+      letter-spacing:.3em;
+
+      color:var(--gold);
+
+      text-transform:uppercase;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .performance-hero {
+      position:relative;
+
+      min-height:70svh;
+
+      display:flex;
+      align-items:flex-end;
+
+      padding:150px 0 100px;
+
+      overflow:hidden;
+
+      border-bottom:1px solid #e6c08155;
+    }
+
+    .performance-hero::before {
+      content:'PERFORMANCE';
+
+      position:absolute;
+
+      right:-.05em;
+      bottom:-.12em;
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:
+        clamp(
+          9rem,
+          25vw,
+          27rem
+        );
+
+      font-weight:900;
+
+      line-height:1;
+
+      color:#ffffff05;
+
+      pointer-events:none;
+    }
+
+    .performance-hero h1 {
+      margin:22px 0 0;
+
+      font-family:
+        'Barlow Condensed',
+        'Noto Sans JP',
+        sans-serif;
+
+      font-size:
+        clamp(
+          3.8rem,
+          9vw,
+          8rem
+        );
+
+      font-weight:900;
+
+      line-height:.95;
+
+      letter-spacing:-.04em;
+    }
+
+    .performance-hero h1 span {
+      color:var(--gold);
+    }
+
+    .hero-copy {
+      max-width:700px;
+
+      margin-top:30px;
+
+      color:#d7d0c8;
+
+      font-size:
+        clamp(
+          .98rem,
+          1.8vw,
+          1.2rem
+        );
+
+      line-height:2;
+    }
+
+/* =========================
+   A LEVEL SCORING GUIDE
+========================= */
+
+.score-guide{
+  padding:90px 0 70px;
+  background:
+    linear-gradient(
+      180deg,
+      #120c10,
+      #080809
+    );
+  border-top:1px solid #e6c08135;
+}
+
+.score-guide-head{
+  max-width:700px;
+}
+
+.score-guide-head h2{
+  margin:18px 0 20px;
+
+  font-size:
+    clamp(
+      2.3rem,
+      5vw,
+      4.5rem
+    );
+
+  line-height:1.1;
+}
+
+.score-guide-head p{
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:1rem;
+  line-height:1.9;
+}
+
+.score-guide-video{
+  width:min(100%,420px);
+
+  margin:45px auto 0;
+
+  padding:8px;
+
+  border:1px solid var(--gold);
+
+  background:#000;
+
+  box-shadow:
+    14px 16px 0 #ed293836;
+}
+
+.score-guide-video video{
+  display:block;
+
+  width:100%;
+
+  aspect-ratio:9 / 16;
+
+  object-fit:contain;
+
+  background:#000;
+}
+
+.score-guide-next{
+  max-width:520px;
+
+  margin:35px auto 0;
+
+  padding:18px 20px;
+
+  border-top:1px solid #e6c08166;
+  border-bottom:1px solid #e6c08166;
+
+  color:var(--gold);
+
+  font-weight:900;
+  text-align:center;
+  line-height:1.8;
+}
+
+
+
+/* =========================
+   A LEVEL SCORE SIMULATOR
+========================= */
+
+.sim{
+  position:relative;
+  margin-top:80px;
+  padding:90px 0;
+
+  background:
+    radial-gradient(
+      circle at 0 30%,
+      #3b0b15,
+      transparent 35%
+    ),
+    #080809;
+
+  overflow:hidden;
+}
+
+.sim::before{
+  content:'SCORE';
+
+  position:absolute;
+
+  right:-.05em;
+  top:10%;
+
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:32vw;
+  font-weight:900;
+  line-height:1;
+
+  color:#ffffff05;
+
+  pointer-events:none;
+}
+
+.sim-title h2{
+  margin:15px 0 0;
+
+  font-size:
+    clamp(
+      2.3rem,
+      5vw,
+      4.5rem
+    );
+
+  line-height:1.1;
+}
+
+.sim-intro{
+  max-width:680px;
+
+  margin:
+    25px 0 50px;
+
+  color:var(--muted);
+
+  font-size:1.05rem;
+  line-height:1.9;
+}
+
+.sim-grid{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1.45fr)
+    minmax(300px,.75fr);
+
+  gap:16px;
+
+  align-items:start;
+}
+
+.sim-form{
+  padding:40px;
+
+  background:#151114;
+
+  border:
+    1px solid #ab876853;
+}
+
+.sim-group + .sim-group{
+  margin-top:36px;
+
+  padding-top:28px;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.sim-group h3{
+  margin:
+    0 0 22px;
+
+  font-family:
+    'Barlow Condensed',
+    'Noto Sans JP',
+    sans-serif;
+
+  font-size:1.25rem;
+
+  letter-spacing:.08em;
+
+  color:var(--gold);
+}
+
+.sim-group h3 b{
+  margin-right:10px;
+
+  color:var(--red);
+}
+
+.fields{
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0,1fr)
+    );
+
+  gap:14px;
+}
+
+.field{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:8px;
+
+  min-width:0;
+}
+
+.field label{
+  font-size:.9rem;
+
+  font-weight:700;
+}
+
+.field select{
+  width:100%;
+
+  min-height:54px;
+
+  padding:10px;
+
+  border:
+    1px solid #a98d6966;
+
+  border-radius:0;
+
+  background:#09090b;
+
+  color:var(--cream);
+
+  cursor:pointer;
+}
+
+.field select:focus-visible{
+  outline:
+    2px solid var(--gold);
+
+  outline-offset:2px;
+
+  box-shadow:
+    0 0 0 5px #eccb8326;
+}
+
+.scoreboard{
+  position:sticky;
+
+  top:90px;
+
+  padding:34px;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #7a1222,
+      #280d14 50%,
+      #101014
+    );
+
+  border:
+    1px solid var(--gold);
+
+  box-shadow:
+    14px 14px 0 #c2223338;
+
+  transition:
+    border-color .3s,
+    box-shadow .3s;
+}
+
+.scoreboard .small{
+  color:var(--gold);
+
+  font-size:.85rem;
+
+  font-weight:900;
+
+  letter-spacing:.16em;
+}
+
+.score{
+  margin:
+    15px 0 25px;
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:
+    clamp(
+      6rem,
+      11vw,
+      10rem
+    );
+
+  font-weight:900;
+
+  line-height:.9;
+
+  letter-spacing:-.04em;
+
+  color:var(--cream);
+}
+
+.score small{
+  font-family:
+    'Noto Sans JP',
+    sans-serif;
+
+  font-size:1.1rem;
+
+  letter-spacing:0;
+}
+
+.details{
+  margin:0;
+
+  padding:0;
+
+  list-style:none;
+
+  border-top:
+    1px solid #ffffff5a;
+}
+
+.details li{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:1rem;
+
+  padding:11px 0;
+
+  border-bottom:
+    1px solid #ffffff32;
+
+  font-size:.9rem;
+}
+
+.details strong{
+  text-align:right;
+}
+
+.scoreboard p{
+  margin:
+    22px 0 0;
+
+  color:#ded0ca;
+
+  font-size:.83rem;
+
+  line-height:1.75;
+}
+
+.score output{
+  display:inline-block;
+
+  min-width:1ch;
+
+  font-variant-numeric:
+    tabular-nums;
+}
+
+.sr-only{
+  position:absolute;
+
+  width:1px;
+  height:1px;
+
+  padding:0;
+  margin:-1px;
+
+  overflow:hidden;
+
+  clip:
+    rect(0,0,0,0);
+
+  white-space:nowrap;
+
+  border:0;
+}
+
+.scoreboard::before{
+  content:'';
+
+  position:absolute;
+
+  inset:
+    -70% auto auto -60%;
+
+  width:55%;
+  height:220%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ffffff1c,
+      transparent
+    );
+
+  transform:
+    rotate(20deg);
+
+  pointer-events:none;
+}
+
+.scoreboard.score-pop{
+  border-color:#fff5d4;
+
+  box-shadow:
+    0 0 45px #ed293866,
+    14px 14px 0 #c2223338;
+}
+
+.scoreboard.score-pop::before{
+  animation:
+    score-shine .7s ease-out;
+}
+
+@keyframes score-shine{
+
+  to{
+    left:150%;
+  }
+
+}
+
+    /* =========================
+       LEVEL NAV
+    ========================= */
+
+    .level-nav-section {
+      padding:75px 0 20px;
+    }
+
+    .level-nav {
+      display:grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap:3px;
+
+      background:#3a2116;
+    }
+
+    .level-nav a {
+      display:flex;
+
+      align-items:center;
+      justify-content:center;
+
+      min-height:80px;
+
+      background:#171013;
+
+      color:var(--cream);
+
+      text-decoration:none;
+
+      font-family:
+        'Barlow Condensed',
+        'Noto Sans JP',
+        sans-serif;
+
+      font-size:1.2rem;
+
+      font-weight:900;
+
+      transition:
+        background .2s,
+        color .2s,
+        transform .2s;
+    }
+
+    .level-nav a:hover {
+      background:#64121f;
+      color:var(--gold);
+
+      transform:translateY(-3px);
+    }
+
+
+    /* =========================
+       PERFORMANCE LEVEL
+    ========================= */
+
+    .performance-section {
+      position:relative;
+
+      padding:100px 0;
+
+      overflow:hidden;
+    }
+
+    .performance-section + .performance-section {
+      border-top:1px solid #ffffff17;
+    }
+
+    .performance-section::before {
+      content:attr(data-letter);
+
+      position:absolute;
+
+      right:-.04em;
+      bottom:-.28em;
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:
+        clamp(
+          17rem,
+          40vw,
+          40rem
+        );
+
+      font-weight:900;
+
+      line-height:1;
+
+      color:#ffffff04;
+
+      pointer-events:none;
+    }
+
+
+    /* =========================
+       LEVEL HEADER
+    ========================= */
+
+    .level-heading {
+      display:flex;
+
+      align-items:flex-end;
+
+      gap:25px;
+
+      margin-bottom:45px;
+    }
+
+    .level-letter {
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:
+        clamp(
+          6rem,
+          13vw,
+          11rem
+        );
+
+      font-weight:900;
+
+      font-style:italic;
+
+      line-height:.75;
+
+      color:var(--gold);
+
+      text-shadow:
+        5px 6px 0 #8f1723;
+    }
+
+    .level-heading h2 {
+      margin:0;
+
+      font-size:
+        clamp(
+          1.8rem,
+          4vw,
+          3rem
+        );
+
+      line-height:1.2;
+    }
+
+    .level-heading p {
+      margin:8px 0 0;
+
+      color:var(--muted);
+    }
+
+
+    /* =========================
+       ITEMS
+    ========================= */
+
+ .performance-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  align-items:stretch;
+}
+
+    .performance-card {
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+
+  min-height:100%;
+
+  padding:28px;
+
+  border-top:3px solid var(--gold);
+  border-bottom:1px solid #e6c08145;
+
+  background:
+    linear-gradient(
+      145deg,
+      #191116,
+      #0d0c0e
+    );
+
+  overflow:hidden;
+}
+
+    .performance-card:hover {
+      transform:translateY(-5px);
+
+      background:
+        linear-gradient(
+          145deg,
+          #2e1118,
+          #110d10
+        );
+
+      box-shadow:
+        12px 14px 0
+        #ed29381b;
+    }
+
+    .performance-card .number {
+      display:block;
+
+      margin-bottom:18px;
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:.82rem;
+
+      font-weight:800;
+
+      letter-spacing:.2em;
+
+      color:var(--red);
+    }
+
+    .performance-card h3 {
+      margin:0 0 12px;
+
+      font-size:
+        1.25rem;
+    }
+
+    .performance-card p {
+      margin:0;
+
+      color:#d7cec5;
+
+      font-size:.92rem;
+
+      line-height:1.8;
+    }
+
+.performance-card p {
+  margin:0;
+  color:#d7cec5;
+  font-size:.92rem;
+  line-height:1.8;
+}
+
+
+/* 技一覧 */
+
+.skill-list {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+  row-gap:14px;
+  margin-top:20px;
+
+  width:100%;
+  max-width:100%;
+}
+
+.skill-list span {
+  display:flex;
+  align-items:flex-end;
+  gap:7px;
+
+
+flex:0 0 auto;
+
+  padding:10px 13px 8px;
+
+  background:#241015;
+  border:1px solid #e6c08155;
+  border-left:3px solid var(--gold);
+
+  color:#fff4df;
+  font-size:.9rem;
+  font-weight:800;
+  line-height:1.2;
+
+  white-space:nowrap;
+  word-break:keep-all;
+}
+.skill-list span b {
+  flex-shrink:0;
+
+  color:var(--gold);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:1.15rem;
+  font-weight:900;
+}
+
+.skill-list i {
+  flex:0 0 auto;
+
+  color:var(--gold);
+  font-size:1.2rem;
+  font-style:normal;
+  font-weight:900;
+}
+
+.skill-list ruby {
+  white-space:nowrap;
+  word-break:keep-all;
+  ruby-position:over;
+}
+
+.skill-list rt {
+  white-space:nowrap;
+  font-size:.55rem;
+  font-weight:700;
+  color:#d9b96f;
+}
+
+/* 模範演技動画 */
+
+.demo-video {
+  margin-top:auto;
+  padding-top:28px;
+}
+
+.performance-card p {
+  margin:0;
+  color:#d7cec5;
+  font-size:.92rem;
+  line-height:1.8;
+}
+
+
+/* 模範演技動画 */
+
+.demo-video {
+  margin-top:24px;
+}
+
+.video-title {
+  margin-bottom:10px;
+  font-size:.8rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  color:var(--gold);
+}
+
+.video-frame {
+  width:min(100%, 520px);
+  aspect-ratio:16 / 9;
+
+  margin-top:8px;
+
+  overflow:hidden;
+  background:#000;
+
+  border:1px solid #e6c08145;
+}
+
+.video-frame video {
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:contain;
+
+  background:#000;
+}
+    .performance-card .score {
+      display:inline-block;
+
+      margin-top:18px;
+
+      padding:5px 9px;
+
+      border:
+        1px solid #e6c08155;
+
+      color:var(--gold);
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:.8rem;
+
+      font-weight:800;
+
+      letter-spacing:.08em;
+    }
+
+
+    /* =========================
+       NOTE
+    ========================= */
+
+    .performance-note {
+      margin-top:35px;
+
+      padding:22px 25px;
+
+      border-left:
+        3px solid var(--red);
+
+      background:#160e12;
+
+      color:#cfc5bc;
+
+      font-size:.88rem;
+
+      line-height:1.9;
+    }
+
+
+    /* =========================
+       BACK
+    ========================= */
+
+    .back-area {
+      padding:40px 20px 120px;
+
+      text-align:center;
+    }
+
+    .back-link {
+      display:inline-block;
+
+      padding:13px 22px;
+
+      border:1px solid var(--gold);
+
+      color:var(--gold);
+
+      font-size:.85rem;
+
+      font-weight:900;
+
+      text-decoration:none;
+
+      transition:
+        background .2s,
+        color .2s,
+        transform .2s;
+    }
+
+    .back-link:hover {
+      background:var(--gold);
+      color:#160b0e;
+
+      transform:translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      display:flex;
+
+      justify-content:space-between;
+
+      gap:1rem;
+
+      padding:24px 40px;
+
+      border-top:1px solid #ffffff1f;
+
+      background:#070709;
+
+      color:#a99f96;
+
+      font-size:.78rem;
+    }
+.menu-toggle{
+  display:none !important;
+}
+
+/* PC：通常メニュー */
+.topbar nav{
+  display:flex;
+  align-items:center;
+  gap:1.4rem;
+}
+
+.topbar nav > a{
+  width:auto;
+  padding:0;
+
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.04em;
+
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+/* 子ページリンク */
+.menu-subpages{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:1.2rem;
+
+  width:auto;
+
+  margin:0 0 0 .6rem;
+  padding:0 0 0 1.2rem;
+
+  border-top:0;
+  border-left:1px solid #e6c08155;
+}
+
+.menu-subpages a{
+  width:auto;
+
+  display:flex;
+  align-items:center;
+  gap:.35rem;
+
+  padding:0;
+
+  border-bottom:0;
+
+  color:var(--gold) !important;
+
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.04em;
+
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.menu-subpages a span{
+  color:var(--gold);
+}
+
+.menu-subpages{
+  width:100%;
+}
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width:850px) {
+
+      .performance-grid {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+      }
+ }
+
+    @media(max-width:760px){
+
+.score-guide{
+  padding:70px 0 55px;
+}
+
+.score-guide-video{
+  width:min(88vw,360px);
+  margin-top:35px;
+}
+
+.score-guide-next{
+  font-size:.9rem;
+}
+
+
+
+.menu-subpages{
+  width:100%;
+  margin-top:14px;
+  padding-top:14px;
+
+  border-top:1px solid #e6c08155;
+}
+
+.topbar nav a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* 現在地は白文字 */
+.topbar nav a.is-active{
+  color:var(--cream) !important;
+}
+
+/* 子ページだけ金色 */
+.menu-subpages a{
+  color:var(--gold) !important;
+}
+
+.menu-subpages a span{
+  margin-left:auto;
+}
+.sim{
+  margin-top:55px;
+  padding:70px 0;
+}
+
+.sim-grid{
+  grid-template-columns:1fr;
+}
+
+.fields{
+  grid-template-columns:1fr;
+}
+
+.sim-form{
+  padding:25px 20px;
+}
+
+.scoreboard{
+  position:static;
+
+  padding:28px 22px;
+}
+
+.sim-intro{
+  margin-bottom:35px;
+
+  font-size:.95rem;
+}
+
+.score{
+  font-size:
+    clamp(
+      5rem,
+      22vw,
+      8rem
+    );
+}
+
+  .topbar{
+    padding:16px 18px;
+    min-height:68px;
+  }
+
+  .brand{
+    font-size:1.4rem;
+    position:relative;
+    z-index:102;
+  }
+
+  /* ハンバーガーボタン */
+  .menu-toggle{
+  display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+
+    width:42px;
+    height:42px;
+
+    padding:8px;
+
+    margin-left:auto;
+
+    border:0;
+    background:transparent;
+
+    cursor:pointer;
+
+    position:relative;
+    z-index:102;
+  }
+
+  .menu-toggle span{
+    display:block;
+
+    width:100%;
+    height:2px;
+
+    background:var(--cream);
+
+    transition:
+      transform .3s,
+      opacity .3s;
+  }
+
+  /* メニュー本体 */
+  .topbar nav{
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:0;
+
+    padding:
+      95px 28px
+      35px;
+
+    background:#080809f8;
+
+    border-bottom:
+      1px solid #e6c08155;
+
+    backdrop-filter:blur(16px);
+
+    transform:translateY(-110%);
+    transition:transform .35s ease;
+
+    z-index:101;
+  }
+
+  .topbar nav a{
+    width:100%;
+
+    padding:15px 0;
+
+    border-bottom:
+      1px solid #ffffff18;
+
+    font-size:.9rem;
+    letter-spacing:.03em;
+
+    white-space:nowrap;
+  }
+
+  /* 開いた状態 */
+  .topbar.menu-open nav{
+    transform:translateY(0);
+  }
+
+  /* 三本線 → × */
+  .topbar.menu-open
+  .menu-toggle span:nth-child(1){
+    transform:
+      translateY(7px)
+      rotate(45deg);
+  }
+
+  .topbar.menu-open
+  .menu-toggle span:nth-child(2){
+    opacity:0;
+  }
+
+  .topbar.menu-open
+  .menu-toggle span:nth-child(3){
+    transform:
+      translateY(-7px)
+      rotate(-45deg);
+  }
+
+
+  .wrap {
+    width:calc(100% - 36px);
+  }
+
+  .performance-hero {
+    min-height:65svh;
+    padding:120px 0 70px;
+  }
+
+  .level-nav {
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .performance-section {
+    padding:80px 0;
+  }
+
+  .performance-grid {
+    grid-template-columns:1fr;
+  }
+
+  .level-heading {
+    align-items:center;
+  }
+
+  .level-letter {
+    font-size:6rem;
+  }
+
+  .skill-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    margin-top:20px;
+  }
+
+ .skill-list span{
+  width:100%;
+  min-width:0;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+
+  padding:12px 8px;
+
+  font-size:.76rem;
+  line-height:1.25;
+
+  white-space:normal;
+  word-break:normal;
+  overflow-wrap:anywhere;
+}
+
+  .skill-list span b{
+    font-size:1rem;
+  }
+
+  .skill-list i{
+    display:none;
+  }
+
+  footer {
+    padding:20px 18px;
+    flex-direction:column;
+    text-align:center;
+  }
+
+.long-skill{
+  font-size:.60rem !important;
+}
+@media(max-width:760px){
+
+  .menu-subpages{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+
+    width:100%;
+
+    margin:14px 0 0;
+    padding:14px 0 0;
+
+    /* PC用の枠を消す */
+    border:0;
+    border-top:1px solid #e6c08155;
+  }
+
+  .menu-subpages a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    width:100%;
+
+    padding:15px 0;
+
+    /* 左右の枠を作らない */
+    border:0;
+    border-bottom:1px solid #ffffff18;
+
+    color:var(--gold) !important;
+
+    white-space:nowrap;
+  }
+
+  .menu-subpages a span{
+    margin-left:auto;
+    color:var(--gold);
+  }
+
+}
+
+}
+
+@media(max-width:420px){
+  .topbar .brand{
+    font-size:1.28rem;
+  }
+
+ 
+
+  .topbar nav a{
+    font-size:.75rem;
+    line-height:1.45;
+  }
+
+  .topbar nav a:after{
+    bottom:-2px;
+  }
+}
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+ <header class="topbar">
+
+  <a class="brand" href="index.html">
+    GRAND <em>FES</em>
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="メニューを開く"
+    aria-expanded="false">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+  <nav aria-label="メインナビゲーション">
+
+    <a href="index.html#news">お知らせ</a>
+
+    <a href="index.html#event">大会概要</a>
+
+    <a href="index.html#levels">出場レベル</a>
+
+    <a href="index.html#pv">
+      公式プロモーション動画
+    </a>
+
+    <a href="index.html#digest">
+      過去大会ダイジェスト動画
+    </a>
+
+    <div class="menu-subpages">
+
+      <a href="guide.html">
+    大会案内
+    <span>↗</span>
+  </a>
+
+  <a href="performance.html">
+    各レベルの演技項目
+    <span>↗</span>
+  </a>
+
+  <a href="message.html">
+    主催者からのメッセージ
+    <span>↗</span>
+  </a>
+
+</div>
+
+  </nav>
+
+</header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="performance-hero">
+
+    <div class="wrap">
+
+      <div class="eyebrow">
+        GRAND FES 2027 / PERFORMANCE
+      </div>
+
+      <h1>
+        演技項目を、<br>
+        <span>確認しよう。</span>
+      </h1>
+
+      <p class="hero-copy">各レベルで挑戦する演技項目を確認できます。自分の出場レベルを選び、本番に向けて演技を準備していきましょう。</p>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       LEVEL NAVIGATION
+  ========================= -->
+
+  <section class="level-nav-section">
+
+    <div class="wrap">
+
+      <div class="level-nav">
+
+        <a href="#level-a">
+          A LEVEL
+        </a>
+
+        <a href="#level-b">
+          B LEVEL
+        </a>
+
+        <a href="#level-c">
+          C LEVEL
+        </a>
+
+        <a href="#level-d">
+          D LEVEL
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       A LEVEL
+  ========================= -->
+
+  <section
+    class="performance-section"
+    id="level-a"
+    data-letter="A">
+
+    <div class="wrap">
+
+      <div class="level-heading">
+
+        <span class="level-letter">
+          A
+        </span>
+
+        <div>
+          <h2>
+            Aレベル 演技項目
+          </h2>
+
+          <p>
+            バク転・バク宙を一人でできるレベル
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="performance-grid">
+
+  <article class="performance-card">
+
+   
+
+    <h3>
+      トランポリン
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+    スイブルヒップス
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>02</b>
+     <ruby>膝<rt>ひざ</rt></ruby>うちハーフ
+</span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>尻<rt>しり</rt></ruby>うちハーフ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+     <ruby>尻<rt>しり</rt></ruby>うちハーフ
+  </span>
+
+  <i>→</i>
+
+ <span class="long-skill">
+
+    <b>05</b>
+1<ruby>回<rt>かい</rt></ruby>ひねりジャンプ
+</span>        
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+    <ruby>腹<rt>はら</rt></ruby>うち
+  </span>
+
+<i>→</i>
+
+<span>
+    <b>07</b>
+    グージャンプ
+  </span>
+
+<i>→</i>
+
+<span>
+    <b>08</b>
+    パージャンプ
+  </span>
+
+<i>→</i>
+
+<span>
+    <b>09</b>
+    ローラー
+  </span>
+
+<i>→</i>
+
+<span>
+    <b>10</b>
+    フリー演技
+  </span>
+
+</div>
+
+   <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="a-trampoline.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+
+  </article>
+
+
+  <article class="performance-card">
+
+    
+    <h3>
+      マット
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+    フリー演技
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>02</b>
+    フリー演技
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>
+      倒立前転
+      <rt>とうりつぜんてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+    <ruby>
+      側転
+      <rt>そくてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+    <ruby>
+      伸膝後転
+      <rt>しんしつこうてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+    フリー演技
+  </span>
+
+</div>
+
+
+   <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="a-mat.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+  </article>
+
+</div>
+
+<section class="score-guide">
+
+  <div class="wrap">
+
+    <div class="score-guide-head">
+
+      <span class="eyebrow">
+        A LEVEL / SCORING GUIDE
+      </span>
+
+      <h2>
+        Aレベルの<br>
+        採点方法を確認しよう。
+      </h2>
+
+      <p>
+        点数シミュレーターを使う前に、
+        Aレベルの採点方法や得点の考え方を
+        動画で確認できます。
+      </p>
+
+    </div>
+
+
+    <div class="score-guide-video">
+
+      <video
+        controls
+        playsinline
+        preload="metadata">
+
+        <source
+          src="GRAND_FES_Aレベル採点方法ガイド_ナレーション付き.mp4"
+          type="video/mp4">
+
+        お使いのブラウザは動画再生に対応していません。
+
+      </video>
+
+    </div>
+
+
+    <div class="score-guide-next">
+      ↓ 動画を確認したら、
+      下の点数シミュレーターで
+      自分の構成を試してみよう
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="sim" id="simulator">
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      A LEVEL SCORE LAB
+    </div>
+
+    <div class="sim-title">
+      <h2>
+        技の組み合わせを、<br>
+        試してみよう。
+      </h2>
+    </div>
+
+    <p class="sim-intro">
+      Aレベルの演技項目を確認しながら、
+      技・ひねり・着地を選んで想定得点を試せます。
+      <br>
+      バク転、バク宙の際のロンダートは既に含まれています。
+    </p>
+
+    <div class="sim-grid">
+
+      <form class="sim-form" id="score-form">
+
+        <div class="sim-group">
+
+          <h3>
+            <b>01</b>
+            実施する技
+          </h3>
+
+          <div class="fields">
+
+            <div class="field">
+              <label for="skill1">
+                1つ目の技
+              </label>
+
+              <select id="skill1">
+                <option value="0">なし</option>
+                <option value="100">バク転（100点）</option>
+                <option value="150">バク宙・前宙・転宙（150点）</option>
+                <option value="100">側宙・ハンド（100点）</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="skill2">
+                2つ目の技
+              </label>
+
+              <select id="skill2">
+                <option value="0">なし</option>
+                <option value="100">バク転（100点）</option>
+                <option value="150">バク宙・前宙・転宙（150点）</option>
+                <option value="100">側宙・ハンド（100点）</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="skill3">
+                3つ目の技
+              </label>
+
+              <select id="skill3">
+                <option value="0">なし</option>
+                <option value="100">バク転（100点）</option>
+                <option value="150">バク宙・前宙・転宙（150点）</option>
+                <option value="100">側宙・ハンド（100点）</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="sim-group">
+
+          <h3>
+            <b>02</b>
+            ひねり・着地・出来栄え
+          </h3>
+
+          <div class="fields">
+
+            <div class="field">
+              <label for="twist">
+                ひねり
+              </label>
+
+              <select id="twist">
+                <option value="0">なし（0点）</option>
+                <option value="100">半ひねり（100点）</option>
+                <option value="200">1回ひねり（200点）</option>
+                <option value="300">1回半ひねり（300点）</option>
+                <option value="400">2回ひねり（400点）</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="landing">
+                着地
+              </label>
+
+              <select id="landing">
+                <option value="0">転倒・尻もち（0点）</option>
+                <option value="50">1歩以上動く（50点）</option>
+                <option value="100">完璧着地（100点）</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="execution">
+                出来栄え
+              </label>
+
+              <select id="execution">
+                <option value="0">Bランク（0点）</option>
+                <option value="10">Aランク（10点）</option>
+                <option value="20">Sランク（20点）</option>
+              </select>
+            </div>
+
+          </div>
+
+        </div>
+
+      </form>
+
+
+      <aside class="scoreboard">
+
+        <span
+          class="sr-only"
+          id="score-announcement"
+          aria-live="polite">
+        </span>
+
+        <div class="small">
+          PREDICTED SCORE / 想定合計得点
+        </div>
+
+        <div class="score">
+          <output id="total-score">0</output>
+          <small>点</small>
+        </div>
+
+        <ul class="details">
+
+          <li>
+            <span>技の基本点</span>
+            <strong id="base-score">0点</strong>
+          </li>
+
+          <li>
+            <span>ひねり</span>
+            <strong id="twist-score">0点</strong>
+          </li>
+
+          <li>
+            <span>連続技ボーナス</span>
+            <strong id="combo-score">なし</strong>
+          </li>
+
+          <li>
+            <span>着地</span>
+            <strong id="landing-score">0点</strong>
+          </li>
+
+          <li>
+            <span>出来栄え</span>
+            <strong id="execution-score">0点</strong>
+          </li>
+
+        </ul>
+
+        <p>
+          技を2つ以上選ぶと、
+          技の基本点とひねりの合計に
+          1.2倍のボーナスがかかります。
+        </p>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+</section>
+      <div class="performance-note">
+        ※ 演技項目・採点方法・注意事項は、
+        大会ルールに合わせてここへ記載できます。
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       B LEVEL
+  ========================= -->
+
+  <section
+    class="performance-section"
+    id="level-b"
+    data-letter="B">
+
+    <div class="wrap">
+
+      <div class="level-heading">
+
+        <span class="level-letter">
+          B
+        </span>
+
+        <div>
+          <h2>
+            Bレベル 演技項目
+          </h2>
+
+          <p>
+            先生の補助を受けながら
+            バク転に挑戦するレベル
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="performance-grid">
+
+  <article class="performance-card">
+
+   
+    <h3>
+      トランポリン
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+     <ruby>腹<rt>はら</rt></ruby>うち
+  </span>
+
+  <i>→</i>
+
+  <span class="long-skill">
+    <b>02</b>
+    1<ruby>回<rt>かい</rt></ruby>ひねりジャンプ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>
+     <ruby>尻<rt>しり</rt></ruby>うちハーフ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+    <ruby>尻<rt>しり</rt></ruby>うちハーフ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+   <ruby>腹<rt>はら</rt></ruby>うち
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+    グージャンプ
+  </span>
+
+<i>→</i>
+
+   <span>
+    <b>07</b>
+    パージャンプ
+  </span>
+
+<i>→</i>
+
+<span>
+    <b>08</b>
+    ローラー
+  </span>
+
+
+</div>
+
+    <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="b-trampoline.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+
+  </article>
+
+
+  <article class="performance-card">
+
+   
+    <h3>
+      マット
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+    <ruby>
+      側転
+      <rt>そくてん</rt>
+    </ruby>
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>02</b>
+    <ruby>
+      倒立前転
+      <rt>とうりつぜんてん</rt>
+    </ruby>
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>
+      開脚前転
+      <rt>かいきゃくぜんてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+    <ruby>
+      側転
+      <rt>そくてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+    <ruby>
+      伸膝後転
+      <rt>しんしつこうてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+    <ruby>
+      開脚後転
+      <rt>開脚こうてん</rt>
+    </ruby>
+</span>
+
+<span>
+    <b>07</b>
+    ロンダート～バク転
+  </span>
+
+</div>
+
+
+   <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="b-mat.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+  </article>
+
+</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       C LEVEL
+  ========================= -->
+
+  <section
+    class="performance-section"
+    id="level-c"
+    data-letter="C">
+
+    <div class="wrap">
+
+      <div class="level-heading">
+
+        <span class="level-letter">
+          C
+        </span>
+
+        <div>  
+          <h2>
+            Cレベル 演技項目
+          </h2>
+
+          <p>
+            助走からロンダートができるレベル
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="performance-grid">
+
+  <article class="performance-card">
+
+    
+    <h3>
+      トランポリン
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+     <ruby>尻<rt>しり</rt></ruby>うち
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>02</b>
+       <ruby>尻<rt>しり</rt></ruby>うち
+</span>
+
+  <i>→</i>
+
+  <span class="long-skill">
+    <b>03</b>
+    1<ruby>回<rt>かい</rt></ruby>ひねりジャンプ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+     グージャンプ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+パージャンプ
+ </span>
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+     <ruby>腹<rt>はら</rt></ruby>うち
+  </span>
+
+
+</div>
+
+
+    <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="c-trampoline.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+
+  </article>
+
+
+  <article class="performance-card">
+
+   
+
+    <h3>
+      マット
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+    <ruby>
+      側転
+      <rt>そくてん</rt>
+    </ruby>
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>02</b>
+    <ruby>
+      前転
+      <rt>ぜんてん</rt>
+    </ruby>
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>
+      開脚前転
+      <rt>かいきゃくぜんてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+    <ruby>
+      側転
+      <rt>そくてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+    <ruby>
+      後転
+      <rt>こうてん</rt>
+    </ruby>
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+     <ruby>
+      開脚後転
+      <rt>かいきゃくこうてん</rt>
+    </ruby>
+
+  </span>
+
+</div>
+
+
+    <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="c-mat.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+  </article>
+
+</div>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       D LEVEL
+  ========================= -->
+
+  <section
+    class="performance-section"
+    id="level-d"
+    data-letter="D">
+
+    <div class="wrap">
+
+      <div class="level-heading">
+
+        <span class="level-letter">
+          D
+        </span>
+
+        <div>
+          <h2>
+            Dレベル 演技項目
+          </h2>
+
+          <p>
+            体操を始めたばかりの方向けのレベル
+          </p>
+
+        </div>
+
+      </div>
+
+
+     <div class="performance-grid">
+
+  <article class="performance-card">
+
+   
+    <h3>
+      トランポリン
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+    グージャンプ
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>02</b>
+    パージャンプ
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>尻<rt>しり</rt></ruby>うち
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+    <ruby>尻<rt>しり</rt></ruby>うち
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+    グージャンプ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>06</b>
+    パージャンプ
+  </span>
+
+<i>→</i>
+
+  <span class="long-skill">
+    <b>07</b>
+    1<ruby>回<rt>かい</rt></ruby>ひねりジャンプ
+
+  </span>
+
+</div>
+
+
+    <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="d-trampoline.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+  </article>
+
+
+  <article class="performance-card">
+
+    
+    <h3>
+      マット
+    </h3>
+
+     <div class="skill-list">
+
+  <span>
+    <b>01</b>
+    <ruby>
+      前転
+      <rt>ぜんてん</rt>
+    </ruby>
+
+  </span>
+
+  <i>→</i>
+
+  <span class="long-skill">
+    <b>02</b>
+    1<ruby>回<rt>かい</rt></ruby>ひねりジャンプ
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>03</b>
+    <ruby>水平<rt>すいへい</rt></ruby>バランス
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>04</b>
+    <ruby>
+      前転
+      <rt>ぜんてん</rt>
+    </ruby>
+
+  </span>
+
+  <i>→</i>
+
+  <span>
+    <b>05</b>
+    <ruby>
+      開脚前転
+      <rt>かいきゃくぜんてん</rt>
+    </ruby>
+
+  </span>
+
+
+</div>
+
+
+   <div class="demo-video">
+  <div class="video-title">
+    模範演技動画
+  </div>
+
+  <div class="video-frame">
+    <video controls playsinline preload="metadata">
+      <source src="d-mat.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>
+  </div>
+</div>
+
+  </article>
+
+</div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BACK
+  ========================= -->
+
+  <div class="back-area">
+
+    <a
+      class="back-link"
+      href="index.html">
+
+      ← GRAND FES 2027 TOPへ戻る
+
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <span>
+      GRAND FES 2027
+    </span>
+
+    <span>
+      2027.01.31 / 大宮体育館
+    </span>
+
+  </footer>
+<script>
+const menuToggle =
+  document.querySelector('.menu-toggle');
+
+const topbar =
+  document.querySelector('.topbar');
+
+if(menuToggle && topbar){
+
+  menuToggle.addEventListener('click', () => {
+
+    const opened =
+      topbar.classList.toggle('menu-open');
+
+    menuToggle.setAttribute(
+      'aria-expanded',
+      opened
+    );
+
+    menuToggle.setAttribute(
+      'aria-label',
+      opened
+        ? 'メニューを閉じる'
+        : 'メニューを開く'
+    );
+
+  });
+
+  topbar
+    .querySelectorAll('nav a')
+    .forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        topbar.classList.remove('menu-open');
+
+        menuToggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        menuToggle.setAttribute(
+          'aria-label',
+          'メニューを開く'
+        );
+
+      });
+
+    });
+
+}
+</script>
+
+
+
+<script>
+const scoreForm =
+  document.getElementById('score-form');
+
+if(scoreForm){
+
+  const prefersReducedMotion =
+    window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    );
+
+  let animationFrame = 0;
+
+  let previousScore = 0;
+
+
+  function animateScore(next){
+
+    const output =
+      document.getElementById(
+        'total-score'
+      );
+
+    const board =
+      document.querySelector(
+        '.scoreboard'
+      );
+
+    cancelAnimationFrame(
+      animationFrame
+    );
+
+    board.classList.remove(
+      'score-pop'
+    );
+
+    void board.offsetWidth;
+
+    board.classList.add(
+      'score-pop'
+    );
+
+
+    if(
+      prefersReducedMotion.matches
+    ){
+
+      output.value =
+        next;
+
+      previousScore =
+        next;
+
+      return;
+
+    }
+
+
+    const start =
+      performance.now();
+
+    const from =
+      previousScore;
+
+
+    function step(now){
+
+      const t =
+        Math.min(
+          1,
+          (now - start) / 550
+        );
+
+      const eased =
+        1 -
+        Math.pow(
+          1 - t,
+          3
+        );
+
+      output.value =
+        Math.round(
+          from +
+          (next - from) *
+          eased
+        );
+
+
+      if(t < 1){
+
+        animationFrame =
+          requestAnimationFrame(
+            step
+          );
+
+      }else{
+
+        previousScore =
+          next;
+
+      }
+
+    }
+
+
+    animationFrame =
+      requestAnimationFrame(
+        step
+      );
+
+  }
+
+
+  function updateScore(){
+
+    const get =
+      id =>
+        Number(
+          document
+            .getElementById(id)
+            .value
+        );
+
+
+    const skills = [
+      get('skill1'),
+      get('skill2'),
+      get('skill3')
+    ];
+
+
+    const count =
+      skills
+        .filter(Boolean)
+        .length;
+
+
+    const base =
+      skills.reduce(
+        (a,b) => a + b,
+        0
+      );
+
+
+    const twist =
+      get('twist');
+
+    const landing =
+      get('landing');
+
+    const execution =
+      get('execution');
+
+
+    const total =
+      count
+        ? Math.round(
+            (base + twist) *
+            (
+              count >= 2
+                ? 1.2
+                : 1
+            ) +
+            landing +
+            execution
+          )
+        : 0;
+
+
+    document
+      .getElementById(
+        'base-score'
+      )
+      .textContent =
+        base + '点';
+
+
+    document
+      .getElementById(
+        'twist-score'
+      )
+      .textContent =
+        twist + '点';
+
+
+    document
+      .getElementById(
+        'combo-score'
+      )
+      .textContent =
+        count >= 2
+          ? count +
+            '技 ×1.2'
+          : 'なし';
+
+
+    document
+      .getElementById(
+        'landing-score'
+      )
+      .textContent =
+        landing + '点';
+
+
+    document
+      .getElementById(
+        'execution-score'
+      )
+      .textContent =
+        execution + '点';
+
+
+    document
+      .getElementById(
+        'score-announcement'
+      )
+      .textContent =
+        '想定合計得点 ' +
+        total +
+        '点';
+
+
+    animateScore(total);
+
+  }
+
+
+  scoreForm.addEventListener(
+    'change',
+    updateScore
+  );
+
+
+  updateScore();
+
+}
+</script>
+</body>
+
+</html>

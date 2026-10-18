@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>主催者からのメッセージ | GRAND FES 2027</title>
+
+   <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+
+
+  <style>
+
+    :root {
+      --ink:#080809;
+      --char:#121114;
+      --cream:#f8f5ec;
+      --gold:#eccb83;
+      --gold-deep:#a8732d;
+      --red:#ed2938;
+      --muted:#bab4ae;
+      --line:#ffffff2b;
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    html {
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          #3a0d16,
+          transparent 35%
+        ),
+        #080809;
+
+      color:var(--cream);
+
+      font-family:
+        'Noto Sans JP',
+        sans-serif;
+
+      line-height:1.8;
+
+      overflow-x:hidden;
+    }
+
+    a {
+      color:inherit;
+    }
+
+
+    /* =========================
+   HEADER
+========================= */
+
+.topbar {
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  right:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:20px 40px;
+
+  border-bottom:1px solid #ffffff3a;
+
+  background:#080809a8;
+  backdrop-filter:blur(16px);
+
+  transition:background .25s,border-color .25s;
+}
+
+.brand {
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;
+  font-size:1.7rem;
+  line-height:1;
+  letter-spacing:-.025em;
+
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.brand em {
+  font-style:normal;
+  color:var(--gold);
+}
+
+.topbar nav {
+  display:flex;
+  align-items:center;
+  gap:2.4rem;
+}
+
+.topbar nav a {
+  position:relative;
+
+  margin:0;
+  padding:0;
+
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.08em;
+
+  text-decoration:none;
+  white-space:nowrap;
+
+  transition:color .2s;
+}
+
+.topbar nav a:hover,
+.topbar nav a:focus-visible {
+  color:var(--gold);
+}
+
+.topbar nav a:after {
+  content:'';
+
+  position:absolute;
+  left:0;
+  right:100%;
+  bottom:-8px;
+
+  height:2px;
+
+  background:var(--red);
+
+  transition:right .25s;
+}
+
+.topbar nav a:hover:after,
+.topbar nav a:focus-visible:after {
+  right:0;
+}
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .message-hero {
+      position:relative;
+
+      min-height:70svh;
+
+      display:flex;
+      align-items:flex-end;
+
+      padding:
+        150px 0 100px;
+
+      overflow:hidden;
+
+      border-bottom:
+        1px solid #e6c08155;
+    }
+
+    .message-hero::before {
+      content:'MESSAGE';
+
+      position:absolute;
+
+      right:-.05em;
+      bottom:-.18em;
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:
+        clamp(
+          10rem,
+          30vw,
+          30rem
+        );
+
+      font-weight:900;
+
+      line-height:1;
+
+      color:#ffffff05;
+
+      pointer-events:none;
+    }
+
+    .wrap {
+      width:
+        min(
+          1180px,
+          calc(100% - 80px)
+        );
+
+      margin-inline:auto;
+
+      position:relative;
+
+      z-index:1;
+    }
+
+    .eyebrow {
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:.85rem;
+
+      font-weight:800;
+
+      letter-spacing:.3em;
+
+      color:var(--gold);
+
+      text-transform:uppercase;
+    }
+
+    .message-hero h1 {
+      margin:
+        22px 0 0;
+
+      font-family:
+        'Barlow Condensed',
+        'Noto Sans JP',
+        sans-serif;
+
+      font-size:
+        clamp(
+          3.8rem,
+          9vw,
+          8rem
+        );
+
+      font-weight:900;
+
+      line-height:.95;
+
+      letter-spacing:-.04em;
+    }
+
+    .message-hero h1 span {
+      color:var(--gold);
+    }
+
+    .hero-copy {
+      margin-top:28px;
+
+      max-width:650px;
+
+      color:#d8d1ca;
+
+      font-size:
+        clamp(
+          1rem,
+          1.8vw,
+          1.2rem
+        );
+
+      line-height:2;
+    }
+
+
+    /* =========================
+       MESSAGE
+    ========================= */
+
+    .message-section {
+      position:relative;
+
+      padding:
+        120px 0 140px;
+
+      overflow:hidden;
+    }
+
+    .message-section::before {
+      content:'2027';
+
+      position:absolute;
+
+      left:-.05em;
+      bottom:-.28em;
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:
+        clamp(
+          14rem,
+          38vw,
+          38rem
+        );
+
+      font-weight:900;
+
+      line-height:1;
+
+      color:#ffffff04;
+
+      pointer-events:none;
+    }
+
+    .message-card {
+      position:relative;
+
+      max-width:900px;
+
+      margin:
+        0 auto;
+
+      padding:
+        clamp(
+          32px,
+          6vw,
+          72px
+        );
+
+      border-top:
+        3px solid var(--gold);
+
+      border-bottom:
+        1px solid #e6c08155;
+
+      background:
+        linear-gradient(
+          145deg,
+          #1b1116,
+          #0e0c0f
+        );
+
+      box-shadow:
+        20px 22px 0
+        #ed293818;
+    }
+
+    .message-label {
+      display:block;
+
+      margin-bottom:30px;
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:.8rem;
+
+      font-weight:800;
+
+      letter-spacing:.25em;
+
+      color:var(--gold);
+    }
+
+    .message-card h2 {
+      margin:
+        0 0 40px;
+
+      font-size:
+        clamp(
+          1.8rem,
+          4vw,
+          3rem
+        );
+
+      line-height:1.5;
+
+      letter-spacing:.02em;
+    }
+
+    .message-text {
+      color:#ddd5cc;
+
+      font-size:
+        clamp(
+          .98rem,
+          1.6vw,
+          1.1rem
+        );
+
+      line-height:2.2;
+    }
+
+    .message-text p {
+      margin:
+        0 0 2em;
+    }
+
+    .message-text strong {
+      color:var(--cream);
+    }
+
+
+    /* =========================
+       SIGNATURE
+    ========================= */
+
+    .signature {
+      margin-top:55px;
+
+      padding-top:30px;
+
+      border-top:
+        1px solid var(--line);
+
+      text-align:right;
+    }
+
+    .signature small {
+      display:block;
+
+      color:var(--gold);
+
+      font-family:
+        'Barlow Condensed',
+        sans-serif;
+
+      font-size:.8rem;
+
+      font-weight:800;
+
+      letter-spacing:.2em;
+    }
+
+    .signature strong {
+      display:block;
+
+      margin-top:8px;
+
+      font-size:
+        1.2rem;
+    }
+
+
+    /* =========================
+       BACK
+    ========================= */
+
+    .back-area {
+      padding:
+        0 0 120px;
+
+      text-align:center;
+    }
+
+    .back-link {
+      display:inline-block;
+
+      padding:
+        13px 22px;
+
+      border:
+        1px solid var(--gold);
+
+      color:var(--gold);
+
+      font-size:.85rem;
+
+      font-weight:900;
+
+      text-decoration:none;
+
+      transition:
+        background .2s,
+        color .2s,
+        transform .2s;
+    }
+
+    .back-link:hover {
+      background:var(--gold);
+
+      color:#160b0e;
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      display:flex;
+      justify-content:space-between;
+
+      gap:1rem;
+
+      padding:
+        24px 40px;
+
+      border-top:
+        1px solid #ffffff1f;
+
+      background:#070709;
+
+      color:#a99f96;
+
+      font-size:.78rem;
+    }
+
+.menu-toggle{
+  display:none !important;
+}
+
+/* PC：通常メニュー */
+.topbar nav{
+  display:flex;
+  align-items:center;
+  gap:1.4rem;
+}
+
+.topbar nav > a{
+  width:auto;
+  padding:0;
+
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.04em;
+
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+/* 子ページリンク */
+.menu-subpages{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:1.2rem;
+
+  width:auto;
+
+  margin:0 0 0 .6rem;
+  padding:0 0 0 1.2rem;
+
+  border-top:0;
+  border-left:1px solid #e6c08155;
+}
+
+.menu-subpages a{
+  width:auto;
+
+  display:flex;
+  align-items:center;
+  gap:.35rem;
+
+  padding:0;
+
+  border-bottom:0;
+
+  color:var(--gold) !important;
+
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.04em;
+
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.menu-subpages a span{
+  color:var(--gold);
+}
+
+.menu-subpages{
+  width:100%;
+}
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+   @media(max-width:760px){
+.menu-subpages{
+  width:100%;
+  margin-top:14px;
+  padding-top:14px;
+
+  border-top:1px solid #e6c08155;
+}
+
+.topbar nav a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* 現在地は白文字 */
+.topbar nav a.is-active{
+  color:var(--cream) !important;
+}
+
+/* 子ページだけ金色 */
+.menu-subpages a{
+  color:var(--gold) !important;
+}
+
+.menu-subpages a span{
+  margin-left:auto;
+}
+  .topbar{
+    padding:16px 18px;
+    min-height:68px;
+  }
+
+  .brand{
+    font-size:1.4rem;
+    position:relative;
+    z-index:102;
+  }
+
+  /* ハンバーガーボタン */
+  .menu-toggle{
+  display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+
+    width:42px;
+    height:42px;
+
+    padding:8px;
+
+    margin-left:auto;
+
+    border:0;
+    background:transparent;
+
+    cursor:pointer;
+
+    position:relative;
+    z-index:102;
+  }
+
+  .menu-toggle span{
+    display:block;
+
+    width:100%;
+    height:2px;
+
+    background:var(--cream);
+
+    transition:
+      transform .3s,
+      opacity .3s;
+  }
+
+  /* メニュー本体 */
+  .topbar nav{
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:0;
+
+    padding:
+      95px 28px
+      35px;
+
+    background:#080809f8;
+
+    border-bottom:
+      1px solid #e6c08155;
+
+    backdrop-filter:blur(16px);
+
+    transform:translateY(-110%);
+    transition:transform .35s ease;
+
+    z-index:101;
+  }
+
+  .topbar nav a{
+    width:100%;
+
+    padding:15px 0;
+
+    border-bottom:
+      1px solid #ffffff18;
+
+    font-size:.9rem;
+    letter-spacing:.03em;
+
+    white-space:nowrap;
+  }
+
+  /* 開いた状態 */
+  .topbar.menu-open nav{
+    transform:translateY(0);
+  }
+
+  /* 三本線 → × */
+  .topbar.menu-open
+  .menu-toggle span:nth-child(1){
+    transform:
+      translateY(7px)
+      rotate(45deg);
+  }
+
+  .topbar.menu-open
+  .menu-toggle span:nth-child(2){
+    opacity:0;
+  }
+
+  .topbar.menu-open
+  .menu-toggle span:nth-child(3){
+    transform:
+      translateY(-7px)
+      rotate(-45deg);
+  }
+
+  .wrap {
+    width:calc(100% - 36px);
+  }
+
+  .message-hero {
+    min-height:65svh;
+    padding:120px 0 70px;
+  }
+
+  .message-section {
+    padding:80px 0 100px;
+  }
+
+  .message-card {
+    padding:28px 22px;
+  }
+
+  footer {
+    padding:20px 18px;
+    flex-direction:column;
+    text-align:center;
+  }
+
+}
+
+@media(max-width:760px){
+
+  .menu-subpages{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+
+    width:100%;
+
+    margin:14px 0 0;
+    padding:14px 0 0;
+
+    /* PC用の枠を消す */
+    border:0;
+    border-top:1px solid #e6c08155;
+  }
+
+  .menu-subpages a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    width:100%;
+
+    padding:15px 0;
+
+    /* 左右の枠を作らない */
+    border:0;
+    border-bottom:1px solid #ffffff18;
+
+    color:var(--gold) !important;
+
+    white-space:nowrap;
+  }
+
+  .menu-subpages a span{
+    margin-left:auto;
+    color:var(--gold);
+  }
+
+}
+
+@media(max-width:420px){
+  .topbar .brand{
+    font-size:1.28rem;
+  }
+
+  
+
+  .topbar nav a{
+    font-size:.75rem;
+    line-height:1.45;
+  }
+
+  .topbar nav a:after{
+    bottom:-2px;
+  }
+}
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+<header class="topbar">
+
+  <a class="brand" href="index.html">
+    GRAND <em>FES</em>
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="メニューを開く"
+    aria-expanded="false">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </button>
+
+  <nav aria-label="メインナビゲーション">
+
+    <a href="index.html#news">お知らせ</a>
+
+    <a href="index.html#event">大会概要</a>
+
+    <a href="index.html#levels">出場レベル</a>
+
+    <a href="index.html#pv">
+      公式プロモーション動画
+    </a>
+
+    <a href="index.html#digest">
+      過去大会ダイジェスト動画
+    </a>
+
+    <div class="menu-subpages">
+
+      <a href="guide.html">
+    大会案内
+    <span>↗</span>
+  </a>
+
+  <a href="performance.html">
+    各レベルの演技項目
+    <span>↗</span>
+  </a>
+
+  <a href="message.html">
+    主催者からのメッセージ
+    <span>↗</span>
+  </a>
+
+</div>
+
+  </nav>
+
+</header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="message-hero">
+
+    <div class="wrap">
+
+      <div class="eyebrow">
+        ORGANIZER MESSAGE
+      </div>
+
+      <h1>
+        主催者から、<br>
+        <span>すべての挑戦者へ。</span>
+      </h1>
+
+      <p class="hero-copy">GRAND FESに込めた想いと、大会に挑戦するすべての皆さんへお伝えしたいメッセージです。</p>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MESSAGE
+  ========================= -->
+
+  <section class="message-section">
+
+    <div class="wrap">
+
+      <article class="message-card">
+
+        <span class="message-label">
+          MESSAGE / GRAND FES 2027
+        </span>
+
+        <h2>
+          「挑戦すること」を、<br>
+          もっと特別な経験に。
+        </h2>
+
+        <div class="message-text">
+
+         <p>
+  GRAND FESは、日々の練習で身につけた技を<br>
+  ただ披露するだけの大会ではありません。
+</p>
+
+<p>
+  大切なのは、自分から目標に向かって「挑戦する」こと。<br>
+  何度も失敗を繰り返し、自分の力で掴み取った「できた！」という最高の達成感と感情を、<br>
+  仲間やご家族、指導者と一緒に分かち合う舞台です。
+</p>
+
+<p>
+  初めて挑戦する子も、さらに上のレベルを目指す子も、<br>
+  今日この場所に立つまでには、それぞれの試行錯誤と葛藤がありました。
+</p>
+
+<p>
+  <strong>
+    成功も、思うようにいかなかった悔しさも、<br>
+    本気で挑戦したすべての経験が、子どもたちの可能性を大きく広げます。
+  </strong>
+</p>
+
+<p>
+  GRAND FESが、「また挑戦したい」「もっと上手になりたい」と<br>
+  次の一歩を踏み出すきっかけになれば、これ以上の喜びはありません。<br>
+  私たち指導者も、挑戦し続ける子どもたちと共に成長し、可能性を広げていきます。
+</p>
+
+<p>
+  2027年1月31日。<br>
+  大宮体育館で、皆さんの熱い挑戦を楽しみに待っています！
+</p>
+        </div>
+
+
+        <div class="signature">
+
+          <small>
+            GRAND FES ORGANIZER
+          </small>
+
+          <strong>
+            GRAND FES 主催者一同
+          </strong>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BACK
+  ========================= -->
+
+  <div class="back-area">
+
+    <a
+      class="back-link"
+      href="index.html">
+
+      ← GRAND FES 2027 TOPへ戻る
+
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <span>
+      GRAND FES 2027
+    </span>
+
+    <span>
+      2027.01.31 / 大宮体育館
+    </span>
+
+  </footer>
+
+<script>
+const menuToggle =
+  document.querySelector('.menu-toggle');
+
+const topbar =
+  document.querySelector('.topbar');
+
+if(menuToggle && topbar){
+
+  menuToggle.addEventListener('click', () => {
+
+    const opened =
+      topbar.classList.toggle('menu-open');
+
+    menuToggle.setAttribute(
+      'aria-expanded',
+      opened
+    );
+
+    menuToggle.setAttribute(
+      'aria-label',
+      opened
+        ? 'メニューを閉じる'
+        : 'メニューを開く'
+    );
+
+  });
+
+  topbar
+    .querySelectorAll('nav a')
+    .forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        topbar.classList.remove('menu-open');
+
+        menuToggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        menuToggle.setAttribute(
+          'aria-label',
+          'メニューを開く'
+        );
+
+      });
+
+    });
+
+}
+</script>
+</body>
+
+</html>
