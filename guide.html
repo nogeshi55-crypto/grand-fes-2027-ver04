@@ -567,11 +567,264 @@
 }
 
 
+/* =========================
+   GUIDE ACCORDION
+========================= */
+
+.guide-accordion{
+  padding:100px 0 130px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      #301019 0%,
+      transparent 32%
+    ),
+    #0a090b;
+}
+
+.guide-accordion-head{
+  margin-bottom:55px;
+}
+
+.guide-accordion-head h2{
+  margin:14px 0 16px;
+
+  font-size:clamp(3rem,7vw,6rem);
+  line-height:1;
+}
+
+.guide-accordion-head p{
+  margin:0;
+  color:var(--muted);
+}
+
+
+/* 1項目 */
+
+.guide-dropdown{
+  border-top:1px solid #ffffff22;
+}
+
+.guide-dropdown:last-of-type{
+  border-bottom:1px solid #ffffff22;
+}
+
+
+/* タイトル部分 */
+
+.guide-dropdown summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:25px;
+
+  padding:28px 5px;
+
+  cursor:pointer;
+
+  list-style:none;
+}
+
+.guide-dropdown summary::-webkit-details-marker{
+  display:none;
+}
+
+
+/* 左側 */
+
+.guide-dropdown-title{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.guide-number{
+  color:var(--gold);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:1.1rem;
+  font-weight:900;
+}
+
+.guide-dropdown-title small{
+  display:block;
+
+  margin-bottom:3px;
+
+  color:var(--gold);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:.75rem;
+  font-weight:900;
+
+  letter-spacing:.2em;
+}
+
+.guide-dropdown-title strong{
+  display:block;
+
+  font-size:1.35rem;
+}
+
+
+/* 右側ステータス */
+
+.guide-status{
+  flex-shrink:0;
+
+  padding:6px 10px;
+
+  border:1px solid #ffffff22;
+
+  color:var(--muted);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:.75rem;
+  font-weight:900;
+
+  letter-spacing:.1em;
+}
+
+.guide-status.is-open{
+  border-color:var(--gold);
+
+  color:var(--gold);
+}
+
+
+/* ＋マーク */
+
+.guide-dropdown summary::after{
+  content:'+';
+
+  margin-left:10px;
+
+  color:var(--gold);
+
+  font-family:
+    'Barlow Condensed',
+    sans-serif;
+
+  font-size:2rem;
+  font-weight:500;
+
+  line-height:1;
+}
+
+.guide-dropdown[open] summary::after{
+  content:'−';
+}
+
+
+/* 中身 */
+
+.guide-dropdown-content{
+  padding:10px 5px 50px;
+}
+
+.coming-content{
+  padding:15px 5px 35px;
+
+  color:var(--muted);
+}
+
+
+/* ACCESS内部 */
+
+.access-grid{
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    minmax(0,1fr);
+
+  gap:50px;
+
+  margin-top:20px;
+
+  align-items:start;
+}
+
+.access-map iframe{
+  display:block;
+
+  width:100%;
+  height:520px;
+
+  border:0;
+}
+
+
 
     /* =========================
        MOBILE
     ========================= */
     @media(max-width:760px){
+
+.guide-accordion{
+  padding:70px 0 90px;
+}
+
+.guide-accordion-head{
+  margin-bottom:35px;
+}
+
+.guide-dropdown summary{
+  padding:22px 0;
+  gap:12px;
+}
+
+.guide-dropdown-title{
+  gap:14px;
+}
+
+.guide-number{
+  font-size:.9rem;
+}
+
+.guide-dropdown-title strong{
+  font-size:1rem;
+}
+
+.guide-dropdown-title small{
+  font-size:.65rem;
+}
+
+.guide-status{
+  font-size:.62rem;
+  padding:5px 7px;
+}
+
+.guide-dropdown summary::after{
+  font-size:1.6rem;
+  margin-left:2px;
+}
+
+.guide-dropdown-content{
+  padding:5px 0 40px;
+}
+
+.access-grid{
+  grid-template-columns:1fr;
+  gap:35px;
+}
+
+.access-map iframe{
+  height:320px;
+}
+
+
 
  .guide-access{
     padding:70px 0 80px;
@@ -841,150 +1094,300 @@
      ACCESS
 ========================= -->
 
-<section class="guide-access" id="access">
+<!-- =========================
+     GUIDE MENU
+========================= -->
+
+<section class="guide-accordion">
 
   <div class="wrap">
 
-    <div class="access-head">
+    <div class="guide-accordion-head">
 
       <span class="eyebrow">
-        01 / ACCESS
-      </span>
-
-      <h2>
-        会場への<span>アクセス</span>
-      </h2>
-
-      <p>
-        GRAND FES 2027の会場は
-        「大宮体育館」です。
-        ご来場前にアクセス方法をご確認ください。
-      </p>
-
-    </div>
+       
 
 
-    <div class="access-grid">
+    <!-- 01 ACCESS -->
+    <details class="guide-dropdown" open>
 
-      <div class="access-info">
+      <summary>
 
-        <div class="access-item">
+        <div class="guide-dropdown-title">
+          <span class="guide-number">01</span>
 
-          <span class="access-label">
-            VENUE / 会場
-          </span>
-
-          <strong>
-            大宮体育館
-          </strong>
-
+          <div>
+            <small>ACCESS</small>
+            <strong>アクセス</strong>
+          </div>
         </div>
 
+        <span class="guide-status is-open">
+          公開中
+        </span>
 
-        <div class="access-item">
-
-          <span class="access-label">
-            ADDRESS / 所在地
-          </span>
-
-          <strong>
-            埼玉県さいたま市見沼区大和田町1-323-4
-          </strong>
-
-        </div>
+      </summary>
 
 
-        <div class="access-item">
+      <div class="guide-dropdown-content">
 
-          <span class="access-label">
-            TRAIN / 電車・バス
-          </span>
+        <div class="access-grid">
 
-          <p>
-            電車でのアクセス<br>東武アーバンパークライン（野田線）
-	<br>• 「大和田駅」から徒歩約16分
-	<br>• 「大宮公園駅」から徒歩約17分
-        <br><br>
-<p>バスでのアクセス<br>
+          <div class="access-info">
 
-• 国際興業バス<br>
- 「大宮駅東口（11番乗場）」から寿能経由導守循環、「大和田坂上バス停」下車 → 徒歩3分<br>
- 「大宮駅東口（6番乗場）」から西中野経由導守循環、「大和田坂上バス停」下車 → 徒歩3分<br>
-・東武バス<br>
-「大宮駅東口」から岩槻駅行・宮下行、「大和田バス停」下車→徒歩約８分
- </p>
+            <div class="access-item">
 
-        </div>
+              <span class="access-label">
+                VENUE / 会場
+              </span>
+
+               <p>
+                大宮体育館
+              </p>
+
+            </div>
 
 
-        <div class="access-item">
+            <div class="access-item">
 
-          <span class="access-label">
-            CAR / お車でお越しの方
-          </span>
+              <span class="access-label">
+                ADDRESS / 所在地
+              </span>
 
-          <p>
-            駐車場は一般の方もご利用されるため、本大会では駐車台数に限りがございます。そのため、事前抽選に当選した方のみ駐車場をご利用いただけます。<br> <strong>
-〈注意〉<br>なお、無断で一般利用エリアの駐車が発覚した場合は当日の大会運営に支障をきたすため絶対におやめください。</strong>
+               <p>
+                〒337-0053 埼玉県さいたま市見沼区大和田町１丁目３０５
+              </p>
 
-          </p>
+            </div>
+
+
+            <div class="access-item">
+
+              <span class="access-label">
+                TRAIN / 電車・バス
+              </span>
+
+              <p>
+                電車でのアクセス<br>
+                東武アーバンパークライン（野田線）<br>
+                ・「大和田駅」から徒歩約16分<br>
+                ・「大宮公園駅」から徒歩約17分
+              </p>
+
+              <p>
+                バスでのアクセス<br>
+                ・国際興業バス<br>
+                「大宮駅東口（11番乗場）」から寿能経由導守循環、
+                「大和田坂上バス停」下車 → 徒歩3分<br>
+
+                「大宮駅東口（6番乗場）」から西中野経由導守循環、
+                「大和田坂上バス停」下車 → 徒歩3分<br>
+
+                ・東武バス<br>
+                「大宮駅東口」から岩槻駅行・宮下行、
+                「大和田バス停」下車 → 徒歩約8分
+              </p>
+
+            </div>
+
+
+            <div class="access-item">
+
+              <span class="access-label">
+                CAR / お車でお越しの方
+              </span>
+
+              <p>
+                駐車場は一般の方もご利用されるため、
+                本大会では駐車台数に限りがございます。
+                そのため、事前抽選に当選した方のみ
+                駐車場をご利用いただけます。
+              </p>
+
+              <p>
+                <strong>
+                  〈注意〉<br>
+                  無断で一般利用エリアへ駐車することは
+                  絶対におやめください。
+                </strong>
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="access-map">
+
+            <span class="access-map-label">
+              MAP
+            </span>
+
+            <!-- 今使っているGoogleマップのiframeをここへ -->
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.9843548760855!2d139.64203507579853!3d35.922882972510195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c12f318cd5b9%3A0x5f66c1f46f76ec96!2z44GV44GE44Gf44G-5biC5aSn5a6u5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1792717751201!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+             
+          </div>
 
         </div>
 
       </div>
 
+    </details>
 
- <!-- 右側：Googleマップ -->
-  <div class="access-map">
 
-  <span class="access-map-label">
-    MAP
-  </span>
+    <!-- 02 ENTRY -->
+    <details class="guide-dropdown">
 
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41019.29518553221!2d139.59531999965364!3d35.945328141603795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c12f318cd5b9%3A0x5f66c1f46f76ec96!2z44GV44GE44Gf44G-5biC5aSn5a6u5L2T6IKy6aSo!5e0!3m2!1sja!2sjp!4v1792299143087!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <summary>
 
-</div>
+        <div class="guide-dropdown-title">
+          <span class="guide-number">02</span>
 
+          <div>
+            <small>ENTRY</small>
+            <strong>申し込み方法</strong>
+          </div>
+        </div>
+
+        <span class="guide-status">
+          COMING SOON
+        </span>
+
+      </summary>
+
+      <div class="guide-dropdown-content coming-content">
+        <p>
+          詳細が決まり次第公開します。
+        </p>
       </div>
 
-    </div>
+    </details>
+
+
+    <!-- 03 RULE -->
+    <details class="guide-dropdown">
+
+      <summary>
+
+        <div class="guide-dropdown-title">
+          <span class="guide-number">03</span>
+
+          <div>
+            <small>RULE</small>
+            <strong>大会ルール</strong>
+          </div>
+        </div>
+
+        <span class="guide-status">
+          COMING SOON
+        </span>
+
+      </summary>
+
+      <div class="guide-dropdown-content coming-content">
+        <p>
+          詳細が決まり次第公開します。
+        </p>
+      </div>
+
+    </details>
+
+
+    <!-- 04 SCHEDULE -->
+    <details class="guide-dropdown">
+
+      <summary>
+
+        <div class="guide-dropdown-title">
+          <span class="guide-number">04</span>
+
+          <div>
+            <small>SCHEDULE</small>
+            <strong>当日の流れ</strong>
+          </div>
+        </div>
+
+        <span class="guide-status">
+          COMING SOON
+        </span>
+
+      </summary>
+
+      <div class="guide-dropdown-content coming-content">
+        <p>
+          詳細が決まり次第公開します。
+        </p>
+      </div>
+
+    </details>
+
+
+    <!-- 05 ITEMS -->
+    <details class="guide-dropdown">
+
+      <summary>
+
+        <div class="guide-dropdown-title">
+          <span class="guide-number">05</span>
+
+          <div>
+            <small>ITEMS / NOTICE</small>
+            <strong>持ち物・注意事項</strong>
+          </div>
+        </div>
+
+        <span class="guide-status">
+          COMING SOON
+        </span>
+
+      </summary>
+
+      <div class="guide-dropdown-content coming-content">
+        <p>
+          詳細が決まり次第公開します。
+        </p>
+      </div>
+
+    </details>
+
+
+    <!-- 06 OTHER -->
+    <details class="guide-dropdown">
+
+      <summary>
+
+        <div class="guide-dropdown-title">
+          <span class="guide-number">06</span>
+
+          <div>
+            <small>OTHER</small>
+            <strong>その他のご案内</strong>
+          </div>
+        </div>
+
+        <span class="guide-status">
+          COMING SOON
+        </span>
+
+      </summary>
+
+      <div class="guide-dropdown-content coming-content">
+        <p>
+          詳細が決まり次第公開します。
+        </p>
+      </div>
+
+    </details>
+
+
+    <a class="back-home" href="index.html">
+      TOPページへ戻る →
+    </a>
 
   </div>
 
 </section>
-
-
-    <section class="guide-coming">
-      <div class="wrap">
-        <div class="coming-card">
-          <span class="coming-label">COMING SOON</span>
-
-          <h2>
-            大会参加に関する情報を、<br>
-            順次公開予定です。
-          </h2>
-
-          <ul class="guide-list">
-<li class="is-open">
-アクセス（公開済み）</li>
-<li>申し込み方法(COMING SOON)</li>
-            <li>大会ルール(COMING SOON)</li>
-            <li>当日の流れ(COMING SOON)</li>
-            <li>持ち物・注意事項(COMING SOON)</li>
-            <li>その他のご案内(COMING SOON)</li>
-          </ul>
-
-          <p class="coming-note">
-            詳細が決まり次第、このページで随時お知らせします。
-            公開までもうしばらくお待ちください。
-          </p>
-
-          <a class="back-home" href="index.html">
-            TOPページへ戻る →
-          </a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer>
